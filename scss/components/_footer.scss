@@ -1,0 +1,45 @@
+/* ====== footer ====== */
+
+@use "../abstract/mixin" as *;
+.footer__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.footer__logo {
+  max-width: 50px;
+  margin-bottom: 28px;
+}
+.copyrights {
+  flex-basis: 100%;
+  @include mq(lg) {
+    flex-basis: 24%;
+  }
+  h5 {
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+}
+
+.footer__links {
+  flex-basis: 50%;
+  @include mq(lg) {
+    flex-basis: calc(100% / 4);
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  a {
+    color: var(--clr-neutral-400);
+    transition: color 200ms ease;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--clr-hover-100);
+  }
+}

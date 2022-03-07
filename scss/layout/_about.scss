@@ -1,0 +1,31 @@
+@use "../abstract/mixin" as *;
+
+.about__content {
+  @include mq(lg) {
+    max-width: 850px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.accent-link {
+  position: relative;
+  color: var(--clr-neutral-400);
+  font-weight: 500;
+  text-decoration: none;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    border-bottom: 5px solid var(--clr-primary-200);
+    transition: transform 250ms ease;
+    transform: rotate(0deg);
+    z-index: -1;
+  }
+
+  &:hover.accent-link::after {
+    transform: scaleY(2);
+  }
+}

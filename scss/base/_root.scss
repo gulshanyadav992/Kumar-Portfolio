@@ -1,0 +1,14 @@
+@use "../abstract/color" as *;
+@use "../abstract/typo" as *;
+/* ========= root ========= */
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $size, $value in $fonts {
+    --fs-#{$size}: #{$value};
+  }
+}

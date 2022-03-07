@@ -1,0 +1,49 @@
+/* ========= typography ========= */
+
+/* font-family: 'Libre Baskerville', serif; 700 
+font-family: 'Raleway', sans-serif; 700
+font-family: 'Roboto', sans-serif;   400 500*/
+@use "../abstract/mixin" as *;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-nr);
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--clr-neutral-400);
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Libre Baskerville";
+  font-size: var(--fs-lg);
+  font-weight: normal;
+  line-height: 1.6;
+  @include mq(sm) {
+    font-size: var(--fs-xl);
+  }
+  @include mq(lg) {
+    max-width: 850px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+h5 {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+h6 {
+  font-size: var(--fs-nr);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  font-size: var(--fs-nr);
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+.lead-heading {
+  font-size: var(--fs-md);
+  color: var(--clr-neutral-600);
+}
