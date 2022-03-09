@@ -1,0 +1,9 @@
+@use "../abstract/mixin" as *;
+
+.about__content {
+  @include mq(lg) {
+    max-width: 850px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}

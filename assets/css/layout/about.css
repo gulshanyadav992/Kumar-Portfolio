@@ -1,0 +1,9 @@
+@media screen and (min-width: 992px) {
+  .about__content {
+    max-width: 850px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

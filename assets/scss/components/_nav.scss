@@ -29,6 +29,7 @@ header {
 .hamburger::before,
 .hamburger::after {
   position: absolute;
+  z-index: 10;
   width: 20px;
   height: 2px;
   background-color: var(--clr-neutral-400);
@@ -52,6 +53,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9;
   max-width: 100%;
   transform: translateY(110%);
   transition: transform 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
